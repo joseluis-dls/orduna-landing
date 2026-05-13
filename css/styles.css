@@ -714,6 +714,35 @@ ul  { list-style: none; }
   padding-top: .75rem;
 }
 
+/* ── FIRMA DE DESARROLLADOR ── */
+.foot-credit {
+  font-size: 11px;
+  margin-top: .5rem;
+}
+.foot-credit a {
+  color: rgba(0,0,0,0.42);
+  text-decoration: none;
+  transition: color 0.25s;
+  position: relative;
+}
+.foot-credit a::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: -2px;
+  width: 100%; height: 0.5px;
+  background: var(--clr-accent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+.foot-credit-cta {
+  color: rgba(0,0,0,0.22);
+  transition: color 0.25s;
+}
+.foot-credit a:hover,
+.foot-credit a:hover .foot-credit-cta { color: var(--clr-accent); }
+.foot-credit a:hover::after { transform: scaleX(1); }
+
 /* ── ANIMACIONES ── */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(24px); }
